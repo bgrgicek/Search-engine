@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel = "stylesheet" href = "css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/jquery.js"></script>
+</head>
+	
+<body>
+	<div class="panel" id="panell">
+		<img id="slogo" src="images/supeus-logo.png" height="10%" width="7%">
+		<h4>STUDENTSKA UDRUGA ZA PROMICANJE ENERGETSKE UČINKOVITOSTI I SAVJETOVANJE</h4>
+		</div>
+		
+		
+	</div>
+
+	<div class="main">
+
+		<div class="content" id="cont5" ng-app="instantSearch" ng-controller="searchFor">
+
+			<h1>NOVOSTI</h1>
+			<input type="text" id="search" placeholder="Pretraži novosti..." ng-model="searchString">
+			<button id="search-icon"><i class="fa fa-search" aria-hidden="true"></i></button>
+			<button id="normal-icon"><i class="fa fa-close" aria-hidden="true"></i></button>
+			<h5>*Search by title and date</h5>
+			
+			
+			<ul>
+				<li class="news" ng-repeat="employee in employees | filter: search"><img id="newsimg" ng-src="{{employee.image}}" />
+				<p id="newstitle">{{employee.title}}<br/></p>
+				<p id="newsdate">{{employee.date}}</p>
+				<p id="newsintro">{{employee.intro}}<button id="arrow-icon"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></p>
+				</li>
+			</ul>
+			
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+			<script src="js/app.js"></script>
+			<script src="js/newsviewer.js"></script>		
+			<script src="js/searchengine.js"></script>
+			<script src="js/search.js"></script>
+		</div>
+	</div>
+</body>
+
+</html>
